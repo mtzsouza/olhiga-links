@@ -1,0 +1,139 @@
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
+:root {
+    --tan: #FFDAB9;
+    --blue: #282885;
+    --brown: #8A3919;
+    --light-blue: #8D8DF7;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--light-blue);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    color: var(--brown);
+
+    .picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background-image: url("./Assets/picture.jpeg");
+        background-position: 50% 30%;
+        background-size: cover;
+    }
+
+    .info-area {
+        position: absolute;
+        top: 40%;
+        width: 100%;
+        height: 60%;
+        background-color: var(--tan);
+        border-radius: 40px 40px 0 0;
+        font-family: 'Kite One';
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+
+        .header {
+            margin-bottom: 40px;
+
+            .name {
+                font-size: 10vw;
+                margin-top: 30px;
+                margin-bottom: 0px;
+            }
+
+            .title {
+                font-size: 4vw;
+                margin: 4px;
+            }
+        }
+
+        .button-area {
+            position: absolute;
+            top: 40%;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;    
+
+            button {
+                position: relative;
+                width: 100%;
+                height: 5vh;
+                background-color: var(--blue);
+                color: white;
+                text-decoration: none;
+                font-family: 'Martel';
+                font-size: 5vw;
+                border: none;
+                border-radius: 15px;
+                
+                i {
+                    position: absolute;
+                    top: 45%;
+                    right: 5%;
+                }
+            }
+        }
+
+        .frase {
+            position: absolute;
+            bottom: 3%;
+            font-size: 4vw;
+        }
+    }
+}
+
+@media screen and (min-width:600px) {
+    .container {
+        width: 25%;
+        height: 90%;
+
+        .info-area {
+            .header {
+            
+                .name {
+                    font-size: 40px;
+                }
+    
+                .title {
+                    font-size: 16px;
+                }
+            }
+
+            .button-area {
+                button {
+                    height: 50px;
+                    font-size: 20px;
+                }
+            }
+    
+            .frase {
+                font-size: 16px;
+            }
+        }
+    }
+}
